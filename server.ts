@@ -17,7 +17,16 @@ const PORT = process.env.PORT || 3000;
 const app: ExpressApp = express();
 const httpServer = createServer(app);
 
-app.use(
+// app.use(
+//   cors({
+//     origin: "*",
+//     optionsSuccessStatus: 200,
+//     credentials: true,
+//     methods: ["GET", "PUT", "POST", "DELETE", "OPTIONS"],
+//   })
+// );
+app.options(
+  "*",
   cors({
     origin: "*",
     optionsSuccessStatus: 200,
