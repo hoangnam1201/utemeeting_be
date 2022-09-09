@@ -19,7 +19,7 @@ const httpServer = createServer(app);
 
 app.use((req: Request, res: Response, next: any) => {
   res.header("Access-Control-Allow-Origin", process.env.HOST_FRONTEND);
-  res.header("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Credentials", true);
   res.header(
     "Access-Control-Allow-Methods",
     "GET,PUT,POST,DELETE,PATCH,OPTIONS"
