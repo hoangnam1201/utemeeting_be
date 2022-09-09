@@ -28,11 +28,6 @@ app.use((req: Request, res: Response, next: any) => {
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept, Authorization"
   );
-  res.status(200).json({ a: "aaaaaaaa", res: res.method });
-  // if (req.method === "OPTIONS") {
-  //   return;
-  // }
-  return;
   next();
 });
 
