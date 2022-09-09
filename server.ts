@@ -18,7 +18,7 @@ const app: ExpressApp = express();
 const httpServer = createServer(app);
 
 app.use((req: Request, res: Response, next: any) => {
-  res.header("Access-Control-Allow-Origin", process.env.HOST_FRONTEND);
+  res.header("Access-Control-Allow-Origin", "https://utemeeting.vercel.app/");
   res.header("Access-Control-Allow-Credentials", true);
   res.header(
     "Access-Control-Allow-Methods",
