@@ -1,4 +1,3 @@
 {
-  "version": 2,
-  "routers": [{ "src": "/(.)", "dest": "/" }]
+  "redirects": [{ "source": "/(.)", "destination": "/" }]
 }
