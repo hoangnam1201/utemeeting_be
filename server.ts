@@ -17,7 +17,7 @@ const PORT = process.env.PORT || 3000;
 const app: ExpressApp = express();
 const httpServer = createServer(app);
 
-app.use(cors({ origin: process.env.HOST_FRONTEND, optionsSuccessStatus: 200 }));
+app.use(cors({ origin: "*", optionsSuccessStatus: 200, credentials: true }));
 
 app.use(json());
 app.use(urlencoded({ extended: false }));
@@ -28,7 +28,7 @@ mongoose.connect(uri);
 // socketjs
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.HOST_FRONTEND,
+    origin: "*",
     methods: ["GET", "POST"],
   },
   maxHttpBufferSize: 1e8,
