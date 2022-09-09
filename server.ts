@@ -23,7 +23,6 @@ app.use(
     optionsSuccessStatus: 200,
     credentials: true,
     methods: ["GET", "PUT", "POST", "DELETE", "OPTIONS"],
-    preflightContinue: false,
   })
 );
 
